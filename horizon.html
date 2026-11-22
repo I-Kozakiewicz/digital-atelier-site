@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" dir="ltr" translate="no" class="notranslate">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google" content="notranslate"><meta name="robots" content="noindex"><title>Horizon | Digital Atelier</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 system-ui,sans-serif}html[lang=ar] body{font-family:Tahoma,Arial,sans-serif}
+.horizon{--paper:#f5f6ff;--ink:#111b3f;--card:#fff;--accent:#2441cc;--accent-text:#fff;--line:#c6cdee;--subtle:#e4e9ff}
+.atelier{--paper:#241c17;--ink:#fff0da;--card:#32261e;--accent:#e2b47e;--accent-text:#241c17;--line:#725a48;--subtle:#412e22}
+a{color:inherit}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,h2:focus-visible{outline:3px solid #d29128;outline-offset:4px}[hidden]{display:none!important}
+.wrap{width:min(100% - 48px,1240px);margin-inline:auto}header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:1.25rem}.brand{text-decoration:none;font-weight:850;font-size:1.65rem;letter-spacing:-.04em}.atelier .brand{font:2rem Georgia,serif}.switcher{display:flex;gap:4px}.switcher button,.filters button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:.42rem .72rem;border-radius:100px}.switcher [aria-pressed=true],.filters [aria-pressed=true]{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.demo-hero{display:grid;grid-template-columns:.85fr 1.15fr;min-height:450px;border-radius:20px;overflow:hidden;background:var(--subtle)}
+.hero-copy{padding:clamp(1.3rem,4.2vw,4rem);align-self:center;position:relative;z-index:1}
+.demo-hero img{display:block;width:100%;height:100%;object-fit:cover;min-width:0}.eyebrow{font-weight:750;font-size:.83rem}.hero-copy p{max-width:34ch;margin:0 0 1.5rem}
+h1,h2,h3{margin-block-start:0}h1{font-size:clamp(2.8rem,6vw,6.3rem);line-height:.98;letter-spacing:-.07em;margin-block:.23em .3em}.atelier h1{font-family:Georgia,serif;font-weight:500}.atelier .demo-hero{position:relative;isolation:isolate;grid-template-columns:1fr;min-height:620px}.atelier .demo-hero img{position:absolute;inset:0;z-index:-2}.atelier .demo-hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to right,#20160ff2,transparent 95%)}[dir=rtl] .atelier .demo-hero::after{background:linear-gradient(to left,#20160ff2,transparent 95%)}.atelier .hero-copy{width:min(80%,720px)}html[lang=ar] h1{font-family:inherit;line-height:1.18;letter-spacing:0;font-size:clamp(2.4rem,5.2vw,5.4rem)}
+.primary,article button{display:inline-block;text-decoration:none;padding:.66rem 1rem;background:var(--accent);color:var(--accent-text);border:0;border-radius:8px;font-weight:750;text-align:start}.atelier .primary,.atelier article button{border-radius:2px}
+.collection{padding-block:clamp(2.4rem,6vw,5.5rem)}h2{font-size:clamp(1.9rem,4vw,4rem);line-height:1.1;letter-spacing:-.04em}.atelier h2{font-family:Georgia,serif;font-weight:500}html[lang=ar] h2{font-family:inherit;letter-spacing:0}.filters{display:flex;flex-wrap:wrap;gap:.55rem;margin-block-end:1.2rem}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}article,.draft{padding:clamp(1.15rem,3vw,2rem);border:1px solid var(--line);background:var(--card);border-radius:12px}article{display:flex;flex-direction:column;align-items:start}.item-meta{font-size:.82rem;font-weight:700}article button{margin-block-start:auto}article h3{margin-block-end:.4rem;font-size:1.25rem}.draft{margin-block-start:1rem}.draft h2{font-size:1.65rem}.draft p:last-child{margin-block-end:0}footer{border-block-start:1px solid var(--line);padding-block:1.35rem}
+@media(max-width:720px){.wrap{width:min(100% - 28px,1240px)}.demo-hero,.cards{grid-template-columns:1fr;min-height:0}.demo-hero img{height:auto;aspect-ratio:1.4}.atelier .demo-hero{min-height:430px}.atelier .demo-hero img{height:100%}.atelier .hero-copy{width:100%}header>a:nth-child(2){order:3;flex-basis:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Horizon uses a bold learning-centre identity, distinct from the other demos. */
+.horizon {
+  --paper:#f4f4fd; --ink:#151936; --accent:#2641dc;
+  --line:#c7cef3; --subtle:#e6eaff;
+  background: radial-gradient(ellipse at 100% 0,#dde3ff,transparent 46%),var(--paper);
+}
+.horizon header { min-height: 82px; }
+.horizon .brand { color:#1c36cb; font-size:clamp(1.7rem,3vw,2.6rem); }
+.horizon header>a:nth-child(2) { font-weight:750; text-underline-offset:.2em; }
+.horizon .demo-hero {
+  isolation:isolate; grid-template-columns: minmax(0,1fr) minmax(0,1.04fr);
+  min-height:clamp(410px,43vw,610px); position:relative;
+  border-radius: 26px; background:#192ab7; color:#fff;
+}
+.horizon .demo-hero::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(ellipse at 6% 100%,#476aff,transparent 70%),linear-gradient(135deg,#233bd2,#14249f);
+}
+.horizon .hero-copy { padding:clamp(25px,4.5vw,72px); }
+.horizon .hero-copy h1 { font-size:clamp(3rem,5.9vw,6.35rem); font-weight:800; letter-spacing:-.075em; max-width:10ch; }
+.horizon .hero-copy p { color:#ebefff; font-size:clamp(1rem,1.4vw,1.22rem); }
+.horizon .eyebrow { display:inline-block; border:1px solid #c3cfff88; border-radius:50px; padding:.32em .78em; color:#eef1ff; }
+.horizon .demo-hero img {
+  align-self:stretch; inset:auto;
+  width:100%; height:100%; min-height:100%; object-fit:cover; object-position:56% center;
+  border-start-start-radius:34% 55%; border-end-start-radius:25% 45%;
+}
+.horizon .primary { background:#f4ff9a; color:#182056; border-radius:50px; padding:.78rem 1.2rem; }
+.horizon .primary:hover { background:#fffcc1; }
+.horizon .collection h2 { font-size:clamp(2.45rem,5.1vw,5.25rem); margin-block-end:.32em; }
+.horizon .filters { margin-block-end:1.5rem; }
+.horizon .filters button { font-weight:700; }
+.horizon .cards { gap:1rem; }
+.horizon article {
+  min-height:255px; position:relative; overflow:hidden; isolation:isolate;
+  border:0; border-radius:20px; box-shadow:inset 0 0 0 1px #233bd221;
+  background:#e5eaff;
+}
+.horizon article:nth-child(2) { background:#f4f8c9; }
+.horizon article:nth-child(3) { background:#f8edff; }
+.horizon article::before {
+  content:""; position:absolute; inset:auto -26px -48px auto; z-index:-1;
+  width:180px; height:180px; border-radius:50%;
+  background:repeating-radial-gradient(circle at center,transparent 0 13px,#2441dc14 14px 15px);
+}
+[dir=rtl] .horizon article::before { inset:auto auto -48px -26px; }
+.horizon article h3 { font-size:clamp(1.23rem,2vw,1.75rem); line-height:1.12; }
+.horizon .item-meta { color:#263a9a; margin-block-end:.55rem; }
+.horizon article button { border-radius:50px; margin-block-start:auto; }
+html[lang=ar] .horizon .hero-copy h1 { letter-spacing:normal; max-width:none; line-height:1.17; font-size:clamp(2.6rem,5.3vw,5.8rem); }
+@media(max-width:720px){
+  .horizon .demo-hero{grid-template-columns:1fr;min-height:0}
+  .horizon .demo-hero img{min-height:0;height:auto;aspect-ratio:1.5;border-radius:10% 10% 0 0}
+  .horizon .hero-copy h1{max-width:none}
+  .horizon article{min-height:0}
+}
+
+.demo-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem);padding-block:1.5rem 3rem}
+.demo-info{min-width:0;padding:clamp(1.25rem,3.5vw,2.8rem);border:1px solid var(--line);background:var(--card,var(--soft));border-radius:14px;scroll-margin-top:1rem}
+.demo-info h2,.demo-services h2{font-size:clamp(1.7rem,3.6vw,3.2rem);margin-block-end:.55em}
+.demo-info p:last-child{margin-bottom:0}
+.demo-info a{display:inline-block;margin-top:.45rem;font-weight:700;text-underline-offset:.24em}
+.demo-services{padding-block:2.5rem;scroll-margin-top:1rem}
+.demo-services .cards article{display:block;min-height:0}
+.demo-services article h3{margin-block-start:0}
+.demo-services article p:last-child{margin-block-end:0}
+.demo-nav{display:flex;flex-wrap:wrap;gap:.55rem clamp(.65rem,2.4vw,2rem);align-items:center;font-size:.95rem}
+.demo-nav a{font-weight:650;text-underline-offset:.22em}
+.atelier .demo-info{border-radius:3px}
+@media(max-width:740px){.demo-sections{grid-template-columns:1fr}.demo-nav{order:3;flex-basis:100%}}
+</style></head>
+<body class="horizon">
+<header class="wrap"><a class="brand" href="#top">Horizon</a><nav class="demo-nav" aria-label="Main navigation"><a href="#about" data-t="aboutNav">About</a><a href="#services" data-t="servicesNav">Services</a><a href="#collection" data-t="browse">Explore programmes</a><a href="#contact" data-t="contactNav">Contact</a></nav><div class="switcher" role="group" aria-label="Language" dir="ltr"><button data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button><button data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button><button data-lang="ar" lang="ar" aria-label="العربية" aria-pressed="false">AR</button></div></header>
+<main class="wrap" id="top">
+<section class="demo-hero"><div class="hero-copy"><span class="eyebrow" data-t="category">Training centre concept</span><h1 data-t="title">Build skills you can use.</h1><p data-t="intro">Practical courses for adults in digital tools, design and professional communication.</p><a class="primary" href="#collection" data-t="browse">Explore programmes</a></div><img src="assets/horizon-hero.png" alt="" width="1536" height="1024"></section>
+<section class="collection" id="collection"><h2 data-t="section">Find a programme</h2><div class="filters"><button type="button" data-group-filter="all" aria-pressed="true" data-t="all">All programmes</button><button type="button" data-group-filter="digital" aria-pressed="false" data-group-label="0">Digital</button><button type="button" data-group-filter="creative" aria-pressed="false" data-group-label="1">Creative</button></div><div class="cards"><article data-group="digital"><p class="item-meta" data-item="0" data-part="3">4 weeks · Beginner</p><h3 data-item="0" data-part="1">Digital Essentials</h3><p data-item="0" data-part="2">Build confidence with documents, spreadsheets and everyday online tools.</p><button type="button" data-select="0" data-t="action">Ask about this programme</button></article><article data-group="creative"><p class="item-meta" data-item="1" data-part="3">6 weeks · Beginner</p><h3 data-item="1" data-part="1">Visual Design Foundations</h3><p data-item="1" data-part="2">Learn layout, typography and colour through a practical design project.</p><button type="button" data-select="1" data-t="action">Ask about this programme</button></article><article data-group="digital"><p class="item-meta" data-item="2" data-part="3">6 weeks · Introductory</p><h3 data-item="2" data-part="1">Web Skills Workshop</h3><p data-item="2" data-part="2">Plan and build a small website using HTML and CSS.</p><button type="button" data-select="2" data-t="action">Ask about this programme</button></article></div><section id="draft" class="draft" aria-labelledby="draft-title" hidden><h2 id="draft-title" tabindex="-1" data-t="summary">Sample admissions enquiry</h2><p id="message"></p><p data-t="note">This demo prepares a message without sending it. Programmes and durations are illustrative.</p></section></section>
+<section class="demo-services" id="services"><h2 data-t="servicesTitle">How Horizon helps learners</h2><div class="cards"><article><h3 data-t="serviceA">Short courses</h3><p data-t="serviceAText">Beginner-friendly courses with a clear syllabus and schedule.</p></article><article><h3 data-t="serviceB">Practical workshops</h3><p data-t="serviceBText">Hands-on sessions built around a task or project.</p></article><article><h3 data-t="serviceC">Admissions guidance</h3><p data-t="serviceCText">Help choosing a programme and understanding what to bring or prepare.</p></article></div></section><div class="demo-sections"><section class="demo-info" id="about"><h2 data-t="aboutTitle">Practical training for adult learners</h2><p data-t="aboutText">Horizon is a fictional training centre in Algiers. Its courses introduce digital tools, visual design and web skills through practical exercises that learners can build on.</p></section><section class="demo-info" id="contact"><h2 data-t="contactTitle">Talk to admissions</h2><p data-t="contactText">Choose a programme and preview a message asking about the next intake. A real centre can add its admissions email, WhatsApp number and office hours here.</p><a href="#collection" data-t="contactAction">Preview an admissions enquiry</a></section></div></main><footer class="wrap"><a href="index.html#templates" data-t="back">← Digital Atelier templates</a></footer>
+<script>
+const text={"en":{"category":"Training centre concept","title":"Build skills you can use.","intro":"Practical courses for adults in digital tools, design and professional communication.","browse":"Explore programmes","section":"Find a programme","all":"All programmes","groups":["Digital","Creative"],"items":[["digital","Digital Essentials","Build confidence with documents, spreadsheets and everyday online tools.","4 weeks · Beginner"],["creative","Visual Design Foundations","Learn layout, typography and colour through a practical design project.","6 weeks · Beginner"],["digital","Web Skills Workshop","Plan and build a small website using HTML and CSS.","6 weeks · Introductory"]],"action":"Ask about this programme","summary":"Sample admissions enquiry","note":"This demo prepares a message without sending it. Programmes and durations are illustrative.","prompt":"Hello, I’d like to learn about the next intake for","back":"← Digital Atelier templates","aboutNav":"About","contactNav":"Contact","aboutTitle":"Practical training for adult learners","aboutText":"Horizon is a fictional training centre in Algiers. Its courses introduce digital tools, visual design and web skills through practical exercises that learners can build on.","contactTitle":"Talk to admissions","contactText":"Choose a programme and preview a message asking about the next intake. A real centre can add its admissions email, WhatsApp number and office hours here.","servicesNav":"Services","servicesTitle":"How Horizon helps learners","serviceA":"Short courses","serviceAText":"Beginner-friendly courses with a clear syllabus and schedule.","serviceB":"Practical workshops","serviceBText":"Hands-on sessions built around a task or project.","serviceC":"Admissions guidance","serviceCText":"Help choosing a programme and understanding what to bring or prepare.","contactAction":"Preview an admissions enquiry"},"fr":{"category":"Concept de centre de formation","title":"Des compétences à mettre en pratique.","intro":"Des formations pour adultes en outils numériques, création visuelle et communication professionnelle.","browse":"Voir les programmes","section":"Trouver une formation","all":"Tous les programmes","groups":["Numérique","Création"],"items":[["digital","Les essentiels du numérique","Maîtrisez les documents, les tableurs et les outils en ligne du quotidien.","4 semaines · Débutant"],["creative","Les bases du design visuel","Explorez la mise en page, la typographie et la couleur à travers un projet concret.","6 semaines · Débutant"],["digital","Atelier de création web","Imaginez et créez un petit site avec HTML et CSS.","6 semaines · Initiation"]],"action":"Demander des informations","summary":"Exemple de demande d’admission","note":"La démo prépare un message sans l’envoyer. Les programmes et les durées sont donnés à titre d’exemple.","prompt":"Bonjour, je souhaite connaître les prochaines dates pour la formation","back":"← Modèles Digital Atelier","aboutNav":"À propos","contactNav":"Contact","aboutTitle":"Des formations pratiques pour adultes","aboutText":"Horizon est un centre de formation fictif à Alger. Ses parcours initient les adultes aux outils numériques, au design visuel et à la création web à travers des exercices pratiques.","contactTitle":"Contacter les admissions","contactText":"Choisissez un programme et préparez un message au sujet de la prochaine session. Un vrai centre peut ajouter ici son e-mail, son numéro WhatsApp et ses horaires.","servicesNav":"Services","servicesTitle":"L’accompagnement proposé par Horizon","serviceA":"Formations courtes","serviceAText":"Des cours pour débutants avec un programme et un calendrier clairs.","serviceB":"Ateliers pratiques","serviceBText":"Des séances axées sur une tâche ou un projet concret.","serviceC":"Conseils à l’inscription","serviceCText":"Un accompagnement pour choisir une formation et préparer son inscription.","contactAction":"Prévisualiser une demande d’admission"},"ar":{"category":"نموذج لمركز تكوين","title":"مهارات تطبّقها في الواقع.","intro":"دورات تطبيقية للبالغين في الأدوات الرقمية والتصميم والتواصل المهني.","browse":"تصفح البرامج","section":"اختر برنامجًا","all":"جميع البرامج","groups":["رقمي","إبداعي"],"items":[["digital","أساسيات الأدوات الرقمية","طوّر مهاراتك في استخدام المستندات والجداول والأدوات اليومية على الإنترنت.","٤ أسابيع · للمبتدئين"],["creative","أساسيات التصميم البصري","تعلّم التنسيق والخطوط والألوان من خلال مشروع تطبيقي.","٦ أسابيع · للمبتدئين"],["digital","ورشة تطوير المواقع","خطّط لموقع صغير وابنه باستخدام لغتي ترميز وتنسيق الويب.","٦ أسابيع · مستوى تمهيدي"]],"action":"استفسر عن البرنامج","summary":"مثال لطلب الالتحاق","note":"تجهّز هذه النسخة رسالة دون إرسالها. البرامج والمدد معروضة لأغراض التوضيح.","prompt":"مرحبًا، أود الاستفسار عن موعد الدفعة القادمة لبرنامج","back":"نماذج Digital Atelier ←","aboutNav":"من نحن","contactNav":"التواصل","aboutTitle":"تكوين عملي للبالغين","aboutText":"أفق مركز تكوين افتراضي في الجزائر العاصمة. تقدّم برامجه أساسيات الأدوات الرقمية والتصميم البصري وتطوير المواقع من خلال تمارين تطبيقية.","contactTitle":"تواصل مع قسم التسجيل","contactText":"اختر برنامجًا وجهّز رسالة للاستفسار عن موعد الدورة القادمة. يمكن لمركز التكوين إضافة بريد التسجيل ورقم واتساب وساعات العمل هنا.","servicesNav":"الخدمات","servicesTitle":"كيف يساعد أفق المتعلمين؟","serviceA":"دورات قصيرة","serviceAText":"دورات للمبتدئين ببرنامج واضح وجدول محدد.","serviceB":"ورشات تطبيقية","serviceBText":"جلسات عملية تركّز على مهمة أو مشروع محدد.","serviceC":"إرشاد للتسجيل","serviceCText":"مساعدة في اختيار البرنامج ومعرفة ما يلزم للتحضير والتسجيل.","contactAction":"عاين طلب الالتحاق"}};
+const q=(s)=>document.querySelector(s);
+const qa=(s)=>document.querySelectorAll(s);
+let lang='en', selected=null;
+const draft=q('#draft');
+function updateMessage(){
+  if(selected===null)return;
+  q('#message').textContent=text[lang].prompt+' « '+text[lang].items[selected][1]+' ».';
+}
+function setLanguage(next){
+  lang=Object.hasOwn(text,next)?next:'en';
+  const t=text[lang];
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  q('.demo-nav').setAttribute('aria-label',{en:'Main navigation',fr:'Navigation principale',ar:'التنقل الرئيسي'}[lang]);
+  q('.switcher').setAttribute('aria-label',{en:'Language',fr:'Langue',ar:'اللغة'}[lang]);
+  qa('[data-t]').forEach(el=>{el.textContent=t[el.dataset.t];});
+  qa('[data-item]').forEach(el=>{el.textContent=t.items[el.dataset.item][el.dataset.part];});
+  qa('[data-group-label]').forEach(el=>{el.textContent=t.groups[el.dataset.groupLabel];});
+  qa('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===lang)));
+  updateMessage();
+}
+qa('[data-lang]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
+qa('[data-group-filter]').forEach(button=>button.addEventListener('click',()=>{
+  const group=button.dataset.groupFilter;
+  qa('[data-group-filter]').forEach(option=>option.setAttribute('aria-pressed',String(option===button)));
+  qa('article[data-group]').forEach(card=>{card.hidden=group!=='all'&&card.dataset.group!==group;});
+}));
+qa('[data-select]').forEach(button=>button.addEventListener('click',()=>{
+  selected=Number(button.dataset.select);
+  updateMessage();
+  draft.hidden=false;
+  q('#draft-title').focus();
+}));
+setLanguage(new URLSearchParams(location.search).get('lang'));
+</script></body></html>

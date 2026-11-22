@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" dir="ltr" translate="no" class="notranslate">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex">
+<title>Élégance | Digital Atelier template</title>
+<style>
+:root {
+  color-scheme: light;
+  --paper: #fbf9f3;
+  --sand: #f0ebdf;
+  --ink: #183a32;
+  --muted: #465a51;
+  --line: #d5d8cb;
+  --green: #153e34;
+  --accent: #cbedbb;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 system-ui, sans-serif; }
+html[lang=ar] body { font-family: Tahoma, Arial, sans-serif; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, select:focus-visible { outline: 3px solid #9c692a; outline-offset: 4px; }
+.wrap { width: min(100% - 56px, 1250px); margin-inline: auto; }
+header, .nav, .languages, .hero-actions, .footer-row { display: flex; align-items: center; flex-wrap: wrap; }
+header { justify-content: space-between; gap: .75rem 1.5rem; padding-block: 1.1rem; }
+header a { text-decoration: none; }
+.nav { gap: .85rem clamp(1.2rem, 4vw, 3.7rem); font-weight: 650; }
+.nav a:hover { text-decoration: underline; }
+.clinic-mark { display: inline-flex; align-items: center; gap: .6rem; font: 500 2rem/1 Georgia, serif; letter-spacing: -.055em; }
+.mark-icon { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; font: 1rem/1 system-ui; background: var(--green); color: var(--accent); border-radius: 50%; }
+.languages { direction: ltr; gap: .2rem; }
+.languages button { color: inherit; border: 0; background: none; border-radius: 100px; padding: .48rem .62rem; font: inherit; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.languages [aria-pressed=true] { background: var(--green); color: white; }
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--sand);
+  min-height: 535px;
+  margin-block: .7rem 0;
+}
+.hero-copy { align-self: center; padding: clamp(1.7rem, 4.2vw, 4.1rem); }
+.hero-art { min-width: 0; min-height: 100%; margin: 0; position: relative; background: #a8ab92; }
+.hero-art img { display: block; width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; object-position: 60% center; }
+.demo-note { display: inline-block; border: 1px solid #aab7a4; border-radius: 100px; padding: .32rem .66rem; font-size: .76rem; font-weight: 700; }
+h1, h2, h3, p { margin-block-start: 0; }
+h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; letter-spacing: -.06em; }
+h1 { font-size: clamp(3rem, 6.2vw, 6.8rem); line-height: .96; margin-block: .28em .26em; }
+h2 { font-size: clamp(2.2rem, 4.5vw, 4.6rem); line-height: 1.04; margin-block-end: .55em; }
+html[lang=ar] :is(h1,h2) { font-family: inherit; letter-spacing: normal; line-height: 1.22; }
+html[lang=ar] h1 { font-size: clamp(2.6rem, 5.2vw, 5.6rem); }
+.hero p { max-width: 33ch; color: var(--muted); margin-block-end: 1.6rem; font-size: 1.1rem; }
+.hero-actions { gap: 1rem; }
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: .65rem; border: 0; border-radius: 100px; background: var(--green); color: white; padding: .82rem 1.18rem; text-decoration: none; font: inherit; font-weight: 700; cursor: pointer; }
+.cta:hover { background: #285a49; }
+.cta:disabled { opacity: .6; cursor: default; }
+.quiet-link, .card-link { font-weight: 700; text-underline-offset: .22em; }
+.section { padding-block: clamp(2.7rem, 6vw, 6rem); scroll-margin-block-start: 1rem; }
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }
+.card { display: flex; flex-direction: column; align-items: start; padding: clamp(1.15rem, 2.7vw, 2rem); min-height: 190px; border-radius: 16px; border: 1px solid var(--line); background: #fffdf8; }
+.card:nth-child(2) { background: #edf2e6; }
+.card:nth-child(3) { background: #f3eee2; }
+.card h3 { font-size: clamp(1.05rem, 1.7vw, 1.45rem); margin-block-end: .45rem; }
+.card p { color: var(--muted); margin-block-end: 1.2rem; }
+.card-link { margin-block-start: auto; font-size: .94rem; }
+.booking { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); gap: 1.8rem clamp(1.5rem, 5vw, 5rem); margin-block-end: 3rem; padding: clamp(1.4rem, 5vw, 4rem); background: var(--green); color: #fffdf6; border-radius: 24px; align-items: start; }
+.booking > div:first-child p, .other-contact p { color: #d9e7dc; }
+form { display: grid; gap: .6rem; align-content: start; padding: clamp(1rem, 2.6vw, 2rem); background: var(--paper); color: var(--ink); border-radius: 14px; }
+label { font-weight: 700; }
+select { color: var(--ink); background: #fff; border: 1px solid #839588; border-radius: 8px; padding: .68rem; max-width: 100%; font: inherit; margin-block-end: .35rem; }
+form .cta { justify-self: start; }
+#result { margin: 0; font-weight: 650; }
+#result:not(:empty) { background: #e1ecd9; border-radius: 8px; padding: .75rem; }
+.other-contact { grid-column: 1/-1; padding-block-start: 1.4rem; border-block-start: 1px solid #91b29c80; }
+.other-contact h3 { margin-block-end: .6rem; }
+.channel-list { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; padding: 0; margin: 0 0 .8rem; }
+.channel-list li { border: 1px solid #91b29c; padding: .4rem .8rem; border-radius: 100px; }
+.other-contact p { margin: 0; font-size: .87rem; }
+footer { border-block-start: 1px solid var(--line); padding-block: 1.35rem; color: var(--muted); }
+.footer-row { justify-content: space-between; gap: .75rem 1.5rem; }
+@media (max-width: 760px) {
+  .wrap { width: min(100% - 28px, 1250px); }
+  .hero, .booking { grid-template-columns: 1fr; min-height: 0; }
+  .hero-art { min-height: 0; aspect-ratio: 1.45; }
+  .hero-copy { padding-block: 2rem; }
+  .services { grid-template-columns: 1fr; }
+  .card { min-height: 0; }
+  .nav { order: 3; flex-basis: 100%; font-size: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.demo-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem);padding-block:1.5rem 3rem}
+.demo-info{min-width:0;padding:clamp(1.25rem,3.5vw,2.8rem);border:1px solid var(--line);background:var(--card,var(--soft));border-radius:14px;scroll-margin-top:1rem}
+.demo-info h2,.demo-services h2{font-size:clamp(1.7rem,3.6vw,3.2rem);margin-block-end:.55em}
+.demo-info p:last-child{margin-bottom:0}
+.demo-info a{display:inline-block;margin-top:.45rem;font-weight:700;text-underline-offset:.24em}
+.demo-services{padding-block:2.5rem;scroll-margin-top:1rem}
+.demo-services .cards article{display:block;min-height:0}
+.demo-services article h3{margin-block-start:0}
+.demo-services article p:last-child{margin-block-end:0}
+.demo-nav{display:flex;flex-wrap:wrap;gap:.55rem clamp(.65rem,2.4vw,2rem);align-items:center;font-size:.95rem}
+.demo-nav a{font-weight:650;text-underline-offset:.22em}
+.atelier .demo-info{border-radius:3px}
+@media(max-width:740px){.demo-sections{grid-template-columns:1fr}.demo-nav{order:3;flex-basis:100%}}
+</style>
+</head>
+<body id="top">
+<header class="wrap">
+  <a class="clinic-mark" href="#top" aria-label="Élégance"><span aria-hidden="true" class="mark-icon">✦</span><span>Élégance</span></a>
+  <nav class="nav" id="nav" aria-label="Demo navigation">
+    <a href="#services" data-t="services">Services</a>
+    <a href="#booking" data-t="booking">Appointments</a><a href="#about" data-t="aboutNav">About</a><a href="#contact" data-t="contactNav">Contact</a>
+  </nav>
+  <div class="languages" id="languages" role="group" aria-label="Language">
+    <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+    <button type="button" data-lang="fr" lang="fr" aria-label="Français" aria-pressed="false">FR</button>
+    <button type="button" data-lang="ar" lang="ar" aria-label="العربية" aria-pressed="false">AR</button>
+  </div>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="demo-note" data-t="demo">Fictional clinic · Template demo</span>
+      <h1 data-t="title">Élégance Clinic</h1>
+      <p data-t="intro">A neighbourhood clinic for routine consultations, preventive check-ups and ongoing care.</p>
+      <div class="hero-actions"><a class="cta" href="#booking"><span data-t="start">Request on WhatsApp</span><span aria-hidden="true">↗</span></a><a class="quiet-link" href="#services" data-t="services">Services</a></div>
+    </div>
+    <figure class="hero-art"><img src="assets/elegance-reception.png" alt="Illustrative reception interior for the fictional Élégance clinic" data-alt="reception"></figure>
+  </section>
+  <section class="section" id="services">
+    <h2 data-t="care">How we can help</h2>
+    <div class="services">
+      <article class="card"><h3 data-t="general">General consultation</h3><p data-t="generalDesc">Discuss a health concern or arrange a routine visit.</p><a class="card-link" href="#booking" data-visit="general" data-t="chooseVisit">Choose this visit</a></article>
+      <article class="card"><h3 data-t="preventive">Preventive check-up</h3><p data-t="preventiveDesc">Review your health history and discuss preventive care.</p><a class="card-link" href="#booking" data-visit="preventive" data-t="chooseVisit">Choose this visit</a></article>
+      <article class="card"><h3 data-t="follow">Follow-up visit</h3><p data-t="followDesc">Review your progress and discuss next steps.</p><a class="card-link" href="#booking" data-visit="follow" data-t="chooseVisit">Choose this visit</a></article>
+    </div>
+  </section>
+  <section class="section booking" id="booking">
+    <div><h2 data-t="bookingTitle">Request an appointment</h2><p data-t="notice">Choose a visit type and preferred time to preview a WhatsApp message. The clinic would confirm the appointment after receiving it.</p></div>
+    <form id="appointment" method="dialog">
+      <label for="service" data-t="selectService">Visit type</label>
+      <select id="service" required>
+        <option value="" data-t="chooseService">Choose a visit type</option>
+        <option value="general" data-t="general">General consultation</option>
+        <option value="preventive" data-t="preventive">Preventive check-up</option>
+        <option value="follow" data-t="follow">Follow-up visit</option>
+      </select>
+      <label for="time" data-t="selectTime">Preferred time</label>
+      <select id="time" required>
+        <option value="" data-t="chooseTime">Choose a time</option>
+        <option value="morning" data-t="morning">Morning</option>
+        <option value="afternoon" data-t="afternoon">Afternoon</option>
+      </select>
+      <button class="cta" id="simulate" type="submit" data-t="submit" disabled>Preview WhatsApp message</button>
+      <p id="result" role="status"></p>
+    </form>
+    <div class="other-contact" aria-labelledby="otherContact"><h3 id="otherContact" data-t="otherContact">Other ways to reach the clinic</h3><ul class="channel-list"><li><strong data-t="call">Call the clinic</strong></li><li><strong>Facebook</strong></li><li><strong>Instagram</strong></li></ul><p data-t="channelsNote">Demo only. These links can be activated with the clinic’s phone number and social profiles.</p></div>
+  </section>
+<div class="demo-sections"><section class="demo-info" id="about"><h2 data-t="aboutTitle">A clinic built around everyday care</h2><p data-t="aboutText">Élégance is a fictional neighbourhood clinic in Algiers. The design shows how a practice can explain its services, help visitors choose a visit, and give them clear ways to reach the team.</p></section><section class="demo-info" id="contact"><h2 data-t="contactTitle">Contact the clinic</h2><p data-t="contactText">To request an appointment, preview a WhatsApp message with your preferred visit type and time. You can also see where the clinic’s phone and social profiles would appear.</p><a href="#booking" data-t="start">Request on WhatsApp</a></section></div></main>
+<footer><div class="wrap footer-row"><span data-t="footer">Élégance is a fictional clinic template by Digital Atelier.</span><a id="return" href="index.html#templates" data-t="back">← Digital Atelier templates</a></div></footer>
+<script>
+const text={"en":{"back":"← Digital Atelier templates","nav":"Demo navigation","language":"Language","services":"Services","booking":"Appointments","demo":"Fictional clinic · Template demo","reception":"Illustrative reception interior for the fictional Élégance clinic","chooseVisit":"Choose this visit","title":"Élégance Clinic","intro":"A neighbourhood clinic for routine consultations, preventive check-ups and ongoing care.","start":"Request on WhatsApp","care":"How we can help","general":"General consultation","generalDesc":"Discuss a health concern or arrange a routine visit.","preventive":"Preventive check-up","preventiveDesc":"Review your health history and discuss preventive care.","follow":"Follow-up visit","followDesc":"Review your progress and discuss next steps.","bookingTitle":"Request an appointment","notice":"Try the booking flow with sample choices. This demo does not collect personal information or send requests.","selectService":"Visit type","chooseService":"Choose a visit type","selectTime":"Preferred time","chooseTime":"Choose a time","morning":"Morning","afternoon":"Afternoon","submit":"Preview WhatsApp message","response":"Sample message only. Nothing was sent.","otherContact":"Other ways to reach the clinic","call":"Call the clinic","channelsNote":"Demo only. The clinic’s phone number and social profiles are needed to activate these options.","footer":"Élégance is a fictional clinic template by Digital Atelier.","aboutNav":"About","contactNav":"Contact","aboutTitle":"A clinic built around everyday care","aboutText":"Élégance is a fictional neighbourhood clinic in Algiers. The design shows how a practice can explain its services, help visitors choose a visit, and give them clear ways to reach the team.","contactTitle":"Contact the clinic","contactText":"To request an appointment, preview a WhatsApp message with your preferred visit type and time. You can also see where the clinic’s phone and social profiles would appear."},"fr":{"back":"← Modèles Digital Atelier","nav":"Navigation de la démo","language":"Langue","services":"Services","booking":"Rendez-vous","demo":"Clinique fictive · Démonstration","reception":"Accueil illustratif de la clinique fictive Élégance","chooseVisit":"Choisir cette consultation","title":"Clinique Élégance","intro":"Une clinique de proximité pour les consultations, les bilans de santé et le suivi médical.","start":"Demander sur WhatsApp","care":"Nos consultations","general":"Consultation générale","generalDesc":"Parlez d’un souci de santé ou planifiez une visite de routine.","preventive":"Bilan de santé","preventiveDesc":"Faites le point sur vos antécédents et discutez des soins préventifs.","follow":"Consultation de suivi","followDesc":"Faites le point sur votre évolution et les prochaines étapes.","bookingTitle":"Demander un rendez-vous","notice":"Choisissez une consultation et un créneau pour prévisualiser un message WhatsApp. La clinique confirmerait le rendez-vous après réception.","selectService":"Type de consultation","chooseService":"Choisissez une consultation","selectTime":"Créneau préféré","chooseTime":"Choisissez un créneau","morning":"Matin","afternoon":"Après-midi","submit":"Prévisualiser le message WhatsApp","response":"Exemple de message. Aucun envoi effectué.","otherContact":"Autres moyens de joindre la clinique","call":"Appeler la clinique","channelsNote":"Démo uniquement. Le numéro et les profils de la clinique sont nécessaires pour activer ces options.","footer":"Élégance est un modèle de clinique fictive créé par Digital Atelier.","aboutNav":"À propos","contactNav":"Contact","aboutTitle":"Une clinique pensée pour les soins du quotidien","aboutText":"Élégance est une clinique de proximité fictive à Alger. Le site montre comment un cabinet peut présenter ses services, aider à choisir une consultation et indiquer comment joindre l’équipe.","contactTitle":"Contacter la clinique","contactText":"Pour demander un rendez-vous, prévisualisez un message WhatsApp avec le type de consultation et le créneau souhaités. Les coordonnées et réseaux sociaux de la clinique ont aussi leur place ici."},"ar":{"back":"نماذج Digital Atelier ←","nav":"التنقل في النموذج","language":"اللغة","services":"الخدمات","booking":"المواعيد","demo":"عيادة افتراضية · نموذج تجريبي","reception":"صورة توضيحية لاستقبال عيادة أناقة الافتراضية","chooseVisit":"اختر هذه الزيارة","title":"عيادة أناقة","intro":"عيادة محلية للاستشارات الطبية والفحوصات الوقائية والمتابعة.","start":"اطلب موعدًا عبر واتساب","care":"كيف يمكننا مساعدتك؟","general":"استشارة عامة","generalDesc":"ناقش مشكلة صحية أو رتّب زيارة دورية.","preventive":"فحص وقائي","preventiveDesc":"راجع تاريخك الصحي وناقش سبل الوقاية.","follow":"زيارة متابعة","followDesc":"راجع تطور حالتك وناقش الخطوات القادمة.","bookingTitle":"طلب موعد","notice":"اختر نوع الزيارة والوقت المفضّل لمعاينة رسالة واتساب. تؤكّد العيادة الموعد بعد استلام الطلب.","selectService":"نوع الزيارة","chooseService":"اختر نوع الزيارة","selectTime":"الوقت المفضّل","chooseTime":"اختر وقتًا","morning":"صباحًا","afternoon":"بعد الظهر","submit":"معاينة رسالة واتساب","response":"رسالة تجريبية. لم يُرسل شيء.","otherContact":"طرق أخرى للتواصل مع العيادة","call":"اتصل بالعيادة","channelsNote":"عرض تجريبي. يلزم رقم العيادة وحساباتها لتفعيل هذه الخيارات.","footer":"أناقة نموذج لعيادة افتراضية من تصميم Digital Atelier.","aboutNav":"من نحن","contactNav":"التواصل","aboutTitle":"عيادة تهتم بالرعاية اليومية","aboutText":"أناقة عيادة محلية افتراضية في الجزائر العاصمة. يوضح التصميم كيف تعرض العيادة خدماتها وتساعد الزائر على اختيار نوع الزيارة وتبيّن له طرق التواصل مع الفريق.","contactTitle":"تواصل مع العيادة","contactText":"لطلب موعد، عاين رسالة واتساب تتضمن نوع الزيارة والوقت المفضّل. ويمكن أن تظهر هنا أيضًا بيانات الهاتف وحسابات العيادة على مواقع التواصل."}};
+const buttons = document.querySelectorAll('[data-lang]');
+const translated = document.querySelectorAll('[data-t]');
+const form = document.getElementById('appointment');
+const result = document.getElementById('result');
+const page = document.documentElement;
+let confirmed = false;
+let current = 'en';
+
+function updateResult() {
+  if (!confirmed) { result.textContent = ''; return; }
+  const copy = text[current];
+  const visit = copy[document.getElementById('service').value];
+  const time = copy[document.getElementById('time').value];
+  result.textContent = copy.response + ' ' + copy.message(visit, time);
+}
+
+function setLanguage(lang) {
+  current = Object.hasOwn(text, lang) ? lang : 'en';
+  const copy = text[current];
+  page.lang = current;
+  page.dir = current === 'ar' ? 'rtl' : 'ltr';
+  document.title = copy.title + ' | Digital Atelier';
+  translated.forEach(element => { element.textContent = copy[element.dataset.t]; });
+  buttons.forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.lang === current)); });
+  document.querySelector('[data-alt=reception]').alt = copy.reception;
+  document.getElementById('nav').setAttribute('aria-label', copy.nav);
+  document.getElementById('languages').setAttribute('aria-label', copy.language);
+  updateResult();
+}
+
+buttons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+document.querySelectorAll('[data-visit]').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('service').value = link.dataset.visit;
+    confirmed = false;
+    updateResult();
+  });
+});
+form.addEventListener('change', () => { confirmed = false; updateResult(); });
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  confirmed = true;
+  updateResult();
+});
+setLanguage(new URLSearchParams(location.search).get('lang'));
+document.getElementById('simulate').disabled = false;
+</script>
+</body>
+</html>
+

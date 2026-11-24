@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <path id="spoke" d="M113 107 104 43 112 31 120 89 128 31 136 43 127 107Z"/>
+  </defs>
+  <g stroke="#e7d9c7" stroke-width="1.4">
+    <circle cx="120" cy="120" r="114"/>
+    <circle cx="120" cy="120" r="103"/>
+    <circle cx="120" cy="120" r="95"/>
+    <use href="#spoke"/>
+    <use href="#spoke" transform="rotate(72 120 120)"/>
+    <use href="#spoke" transform="rotate(144 120 120)"/>
+    <use href="#spoke" transform="rotate(216 120 120)"/>
+    <use href="#spoke" transform="rotate(288 120 120)"/>
+    <circle cx="120" cy="120" r="23"/>
+    <circle cx="120" cy="120" r="9"/>
+  </g>
+</svg>

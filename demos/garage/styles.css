@@ -28,3 +28,95 @@
 .social-strip a{display:inline-flex;align-items:center;min-height:2rem;padding:.18rem .64rem;color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 24%,transparent);border-radius:2rem;font-size:.82rem;font-weight:650;text-decoration:none}
 .social-strip a:hover{background:var(--ink);color:var(--paper)}
 @media(max-width:540px){.social-strip-inner{justify-content:flex-start;align-items:flex-start;padding-block:.5rem}.social-strip-label{flex-basis:100%}}
+
+/* Workshop finishes and motorsport details for Atelier Moteur. */
+:root {
+  --paper: #eeeae3;
+  --ink: #242424;
+  --panel: #e4ddd2;
+  --accent: #9c3627;
+  --rust: #dc785c;
+  --steel: #302f2e;
+}
+.garage {
+  background: radial-gradient(ellipse at 90% 0%, #dcd1c3, transparent 42rem), var(--paper);
+}
+.garage .social-strip { background: #242424; color: var(--paper); }
+.garage .social-strip a { color: inherit; border-color: #ffffff46; }
+.garage .social-strip a:hover { background: #ffffff1c; }
+.garage .top { border-block-end: 1px solid #24242440; }
+.garage .brand { display: inline-flex; align-items: center; gap: .65rem; }
+.garage .brand::before {
+  content: "";
+  inline-size: 1.15rem;
+  block-size: 1rem;
+  background: repeating-linear-gradient(120deg, var(--accent) 0 4px, transparent 4px 7px);
+}
+.garage .hero {
+  margin-block: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1.25rem, 3.6vw, 4rem);
+  gap: clamp(1.25rem, 3vw, 3.75rem);
+  border-radius: 1rem;
+  background:
+    repeating-linear-gradient(125deg, #ffffff07 0 1px, transparent 1px 14px),
+    linear-gradient(135deg, #383736, #202021 65%);
+  color: var(--paper);
+}
+.garage .eyebrow {
+  color: #ffa68b;
+  border-inline-start: 3px solid var(--rust);
+  padding-inline-start: .75rem;
+}
+.garage .hero h1 { font-size: clamp(2.4rem, 5vw, 5.6rem); }
+.garage .photo {
+  height: clamp(245px, 34vw, 590px);
+  border: 1px solid #ffffff36;
+  border-inline-start: 5px solid var(--rust);
+  border-radius: .55rem;
+  box-shadow: 0 16px 32px #15151570;
+}
+.garage .service-card {
+  border: 1px solid #b09c8a;
+  border-radius: .75rem;
+  background: #f8f4ee;
+}
+.garage .service-copy { border-block-start: 3px solid var(--accent); }
+.garage .service-copy button {
+  background: #f1e6db;
+  border: 1px solid #c7ab95;
+  border-radius: .35rem;
+  padding: .4rem .75rem;
+  font-weight: 700;
+}
+.garage .workflow {
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  border-radius: .75rem;
+  border-color: var(--rust);
+  background: linear-gradient(120deg, #242424 30%, #39312e);
+}
+.garage .workflow::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url("assets/alloy-wheel.svg") 98% 45% / clamp(155px, 29vw, 410px) no-repeat;
+  opacity: .24;
+}
+[dir="rtl"] .garage .workflow::before { background-position: 2% 45%; }
+.garage .workflow li { border-block-start-color: #dc785c99; }
+.garage .contact {
+  border: 1px solid #c7b6a5;
+  border-radius: .75rem;
+  background:
+    linear-gradient(109deg, #f2ebe1 52%, #eee6dbed),
+    url("assets/service-2.webp") center / cover;
+}
+.garage .social-panel { border-color: #9e8270; }
+.garage .btn:hover { background: #79291e; }
+@media (max-width: 750px) {
+  .garage .hero h1 { max-width: 18ch; }
+  .garage .workflow::before { background-position: 115% 50%; }
+  [dir="rtl"] .garage .workflow::before { background-position: -15% 50%; }
+}

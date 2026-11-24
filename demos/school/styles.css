@@ -21,63 +21,102 @@
 
 @media(min-width:1200px){.hero h1{max-width:15ch}.sweets .hero h1{max-width:25ch}.hero .intro{font-size:1.125rem}.school .hero{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}}
 
-/* Passerelle's warm, patterned school identity. */
+/* Passerelle's reading-room palette and notebook details. */
+.school {
+  background: radial-gradient(ellipse at 90% 6%, #ead1be, transparent 45rem), var(--paper);
+}
+.school .top { border-block-end-color: #79384650; }
 .school .hero {
   position: relative;
   isolation: isolate;
-  padding-inline: clamp(1.1rem, 4vw, 4.2rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(1.4rem, 4vw, 4.5rem);
   margin-block-start: clamp(1rem, 2.5vw, 2.3rem);
-  border: 1px solid #d9b8ac;
+  padding: clamp(1.25rem, 4vw, 4.25rem);
+  border: 1px solid #ccab98;
   border-radius: 1.1rem;
-  background: #f5e7dc;
+  background:
+    linear-gradient(110deg, #fff8efe8, #edccaf70),
+    repeating-linear-gradient(0deg, transparent 0 29px, #9b634b55 29px 30px),
+    repeating-linear-gradient(90deg, transparent 0 29px, #9b634b55 29px 30px),
+    #efd7c2;
   overflow: hidden;
 }
-.school .hero::before,
-.school .hero::after {
+.school .hero::before {
   content: "";
   position: absolute;
   z-index: -1;
-  pointer-events: none;
-}
-.school .hero::before {
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 15% 35%, #fff8f0 2%, transparent 56%),
-    radial-gradient(ellipse at 95% 80%, #d4a18f 0%, transparent 52%),
-    repeating-linear-gradient(45deg, transparent 0 22px, #a45f601a 22px 23px),
-    repeating-linear-gradient(-45deg, transparent 0 22px, #a45f601a 22px 23px);
-}
-.school .hero::after {
-  inset-block: 14% -40%;
-  inset-inline: 52% -16%;
-  border: 1px solid #9a545557;
+  inset-block: 9% -60%;
+  inset-inline: 48% -13%;
+  border: 1px solid #98524269;
   border-radius: 50% 50% 0 0;
-  box-shadow: 0 0 0 18px #a45f6018, 0 0 0 36px #a45f6015, 0 0 0 54px #a45f6012;
+  box-shadow: 0 0 0 12px #a45f601d, 0 0 0 29px #a45f6018, 0 0 0 46px #a45f6014;
 }
-.school .hero-copy { min-width: 0; }
+.school .eyebrow {
+  border-inline-start: 3px solid #a4543d;
+  padding-inline-start: .75rem;
+}
+.school .hero h1 { font-size: clamp(2.3rem, 4.9vw, 5.7rem); }
+.school .hero-photo {
+  min-inline-size: 0;
+  margin: 0;
+  padding: clamp(5px, .7vw, 11px);
+  border: 1px solid #b97559;
+  border-radius: 1rem;
+  background: #fff5e8;
+  box-shadow: 0 15px 35px #4a28393b;
+}
 .school .hero .photo {
-  border: clamp(4px, .7vw, 9px) solid #9d5e51;
-  border-radius: .8rem;
+  height: auto;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border: 0;
+  border-radius: .6rem;
   transform: none;
-  box-shadow: 0 16px 40px #4a28393b;
 }
 .school .services {
   margin-block: clamp(1rem, 4vw, 3rem);
   padding-inline: clamp(1.1rem, 4vw, 4.2rem);
   background:
-    radial-gradient(circle at 1px 1px, #a05e6826 1px, transparent 1.5px) 0 0 / 16px 16px,
-    #f4e5dd;
+    radial-gradient(circle at 1px 1px, #a05e6838 1px, transparent 1.5px) 0 0 / 18px 18px,
+    linear-gradient(140deg, #f5e4d8, #f3e5e2);
+  border: 1px solid #d6b4a5;
   border-radius: 1rem;
 }
-.school .service-card { background: #fbf2e9; }
+.school .service-card {
+  border: 1px solid #cfa798;
+  border-radius: .75rem;
+  background: #fff8f0;
+}
+.school .service-copy { border-block-start: 3px solid #a8584d; }
+.school .service-copy button {
+  border: 1px solid #cfa798;
+  border-radius: 2rem;
+  padding: .35rem .8rem;
+  background: #f3e4d8;
+  color: #64303c;
+  font-weight: 700;
+}
 .school .workflow {
+  border-radius: 1rem;
+  box-shadow: none;
+  border-inline-end: 5px solid #b76d58;
   background:
-    repeating-linear-gradient(135deg, transparent 0 34px, #ffffff08 34px 35px),
-    var(--ink);
+    repeating-linear-gradient(0deg, #ffead300 0 24px, #f8cfb219 24px 25px),
+    linear-gradient(115deg, #38212c, #62404a);
 }
+.school .workflow li { border-block-start-color: #d39d89; }
+.school .contact {
+  border: 1px solid #d6b4a5;
+  border-radius: 1rem;
+  background: linear-gradient(110deg, #f8eee4 50%, #f1dbd4ed), url("assets/service-3.webp") center / cover;
+}
+[dir="rtl"] .school .hero { background: linear-gradient(250deg, #fff8efe8, #edccaf70), repeating-linear-gradient(0deg, transparent 0 29px, #9b634b55 29px 30px), repeating-linear-gradient(90deg, transparent 0 29px, #9b634b55 29px 30px), #efd7c2; }
 @media (max-width: 750px) {
-  .school .hero::after { inset-block: 52% -35%; inset-inline: 24% -40%; }
+  .school .hero { grid-template-columns: minmax(0, 1fr); }
+  .school .hero::before { inset-block: 52% -75%; inset-inline: 24% -40%; }
 }
+
 .social-strip{border-block-end:1px solid color-mix(in srgb,var(--ink) 16%,transparent);background:var(--panel)}
 .social-strip-inner{display:flex;align-items:center;justify-content:flex-end;gap:.35rem .9rem;flex-wrap:wrap;padding-block:.45rem;min-height:2.8rem}
 .social-strip-label{font-size:.8rem;font-weight:650;margin:0;line-height:1.3}

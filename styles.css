@@ -595,21 +595,22 @@ html[lang="ar"] .concept-title { font-family: Tahoma, Arial, sans-serif; }
   overflow: visible;
 }
 #services .service-visual-card {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: clamp(76px, 8vw, 128px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(12px, 1.3vw, 21px);
+  padding: clamp(14px, 1.5vw, 22px);
   border: 1px solid #e7bd6d32;
   border-radius: 16px;
   background: linear-gradient(150deg, #262423, #201f20);
 }
 .service-image {
-  aspect-ratio: 1.5;
-  flex: none;
+  aspect-ratio: 1;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
   background-color: #39312a;
-  border-block-end: 1px solid #e7bd6d32;
+  border: 1px solid #e7bd6d32;
 }
 .service-image-1 { --tile-position: 0% 0%; }
 .service-image-2 { --tile-position: 50% 0%; }
@@ -617,23 +618,20 @@ html[lang="ar"] .concept-title { font-family: Tahoma, Arial, sans-serif; }
 .service-image-4 { --tile-position: 0% 100%; }
 .service-image-5 { --tile-position: 50% 100%; }
 .service-image-6 { --tile-position: 100% 100%; }
-.service-card-copy { padding: clamp(19px, 2vw, 32px); }
+.service-card-copy { min-inline-size: 0; }
 #services .service-card-copy h3 {
-  font-size: clamp(20px, 1.65vw, 30px);
+  font-size: clamp(18px, 1.55vw, 25px);
   line-height: 1.2;
-  margin-block: 0 .6rem;
+  margin-block: 0 .45rem;
 }
+#services .service-card-copy p { margin: 0; line-height: 1.5; }
 #services .client-brief { margin-block-start: clamp(28px, 4.4vw, 65px); }
 
 
 .service-image::before {
   content: "";
   position: absolute;
-  width: 100%;
-  aspect-ratio: 1;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  inset: 0;
   background: url("assets/studio-service-photos.png") var(--tile-position) / 300% 200% no-repeat;
 }
 

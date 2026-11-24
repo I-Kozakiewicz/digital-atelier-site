@@ -651,3 +651,22 @@ html[lang="ar"] .concept-title { font-family: Tahoma, Arial, sans-serif; }
 .launch-templates { display:inline-block; margin-inline-start:1rem; margin-block:.8rem; color:#fbefe1; text-decoration:underline; text-underline-offset:.22em; }
 .launch-offer .launch-renewal { color:#e5d8c8; font-size:.95rem; line-height:1.5; margin-block:1rem 0; }
 @media(max-width:760px){ .launch-offer { grid-template-columns:1fr; } .launch-offer-price { border-inline-start:0; padding-inline-start:0; border-block-start:1px solid #a582577d; padding-block-start:1.4rem; } .launch-offer .launch-headline { max-inline-size:none; } }
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.footer-socials a {
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .5rem .85rem;
+  font-size: .875rem;
+}
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  color: #edbf65;
+  border-color: currentColor;
+}

@@ -366,6 +366,13 @@ button { font: inherit; }
     linear-gradient(to bottom, transparent, black 12%, black 86%, transparent 97%);
   mask-composite: intersect;
 }
+/* Hide the original caption in the lower-left corner of the hero artwork. */
+[dir="ltr"] .device-scene {
+  mask-image:
+    linear-gradient(to right, transparent 13%, black 32%),
+    linear-gradient(to bottom, transparent, black 12%, black 86%, transparent 97%),
+    radial-gradient(ellipse 34% 13% at 14% 100%, transparent 74%, black 100%);
+}
 .hero-art .device-scene img { mask-image: none; margin-block-end: 0; }
 .lang button {
   min-width: 2.15em;
